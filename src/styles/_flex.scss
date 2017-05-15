@@ -1,0 +1,22 @@
+.vflex {
+  display: flex;
+  flex-direction: column;
+
+  &.jc {
+    justify-content: center;
+  }
+  &.jsb {
+    justify-content: space-between;
+  }
+  &.jsa {
+    justify-content: space-around;
+  }
+
+  &.ac {
+    align-items: center;
+  }
+  &.as {
+    align-items: stretch;
+  }
+
+}

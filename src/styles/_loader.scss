@@ -1,0 +1,41 @@
+.loader-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99999;
+
+  background: #212121 url('../images/bg.png');
+  color: color("yellow","darken-1");
+
+  > div.preloader-wrapper {
+    margin-bottom: 3rem;
+  }
+
+  > div:not(.preloader-wrapper) {
+    padding: 0.5rem 1rem;
+    font-family: "Press Start 2P", monospace;
+  }
+
+  > div.blink {
+    animation: blinker steps(1) 0.5s infinite alternate;
+  }
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+}
+
+@keyframes blinker {
+  0% { visibility: visible; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+}

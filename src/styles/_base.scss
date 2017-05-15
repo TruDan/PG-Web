@@ -1,0 +1,35 @@
+html, body{
+  height: 100%;
+}
+
+body {
+  background: #212121 url('../images/bg.png');
+  color: #F5F5F5;
+  overflow: hidden;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body > .valign-wrapper {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+
+  >.grow {
+    flex:1;
+  }
+}
+
+.nav-wrapper .brand-logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.logo {
+  display:block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}

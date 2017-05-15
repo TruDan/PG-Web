@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <img src="/images/logo.png" class="logo center-align" />
+    </div>
+    <div class="col s12 m6 offset-m3">
+        <form name="homeUsernameForm">
+            <div class="username-field">
+                <div class="input-field">
+                    <input type="text" name="name" id="name" ng-model="home.username" required>
+                    <label for="name">Username</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col s12 m6 offset-m3">
+        <collapsible class="popout">
+            <li>
+                <div class="collapsible-header yellow darken-1 z-depth-2 waves-effect waves-light yellow-text text-darken-4">New Game</div>
+                <div class="collapsible-body yellow darken-3">
+                    <button class="waves-effect waves-light btn light-blue darken-2 light-blue-text text-darken-4 btn-block btn-retro" ng-click="home.newGame()"><i class="material-icons cast-icon left"></i>Cast</button>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header light-blue darken-4 z-depth-2 waves-effect waves-light light-blue-text text-accent-2">Join Game</div>
+                <div class="collapsible-body light-blue darken-3">
+                    <form action="#" name="joinGame">
+                        <div class="input-field">
+                            <input name="code" type="text" id="gameid" ng-model="gameCode" required>
+                            <label for="gameid">Game Code</label>
+                        </div>
+                        <input class="waves-effect waves-light btn yellow yellow-text text-darken-4 btn-block btn-retro" ng-disabled="!joinGame.code.$valid" ng-click="home.joinGame()" value="Play" />
+                    </form>
+                </div>
+            </li>
+        </collapsible>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.username-field input {
+  border-bottom-color: #03A9F4 !important;
+}
+
+.username-field input+label {
+  color: #03A9F4 !important;
+}
+
+.username-field input:focus:not([readonly]) {
+  border-bottom-color: #01579B !important;
+  box-shadow: 0 1px 0 0 #01579B !important;
+}
+.username-field input:focus:not([readonly])+label {
+  color: #01579B !important;
+}
+
+.yellow.darken-3 input {
+  border-bottom-color: #FFEB3B;
+}
+
+.yellow.darken-3 input+label {
+  color: #FFEB3B;
+}
+
+.yellow.darken-3 input:focus:not([readonly]) {
+  border-bottom-color: #F57F17;
+  box-shadow: 0 1px 0 0 #F57F17;
+}
+.yellow.darken-3 input:focus:not([readonly])+label {
+  color: #F57F17;
+}
+
+.light-blue.darken-3 input {
+  border-bottom-color: #03A9F4;
+}
+
+.light-blue.darken-3 input+label {
+  color: #03A9F4;
+}
+
+.light-blue.darken-3 input:focus:not([readonly]) {
+  border-bottom-color: #01579B;
+  box-shadow: 0 1px 0 0 #01579B;
+}
+.light-blue.darken-3 input:focus:not([readonly])+label {
+  color: #01579B;
+}
+
+.username-field {
+  margin-left:24px;
+  margin-right: 24px;
+}

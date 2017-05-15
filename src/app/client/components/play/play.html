@@ -1,0 +1,15 @@
+<div class="row vflex jsb as">
+    <div class="row">
+        <div class="col s10 offset-s1 m6 offset-m3">
+            <a class="waves-effect waves-light btn deep-orange darken-3 btn-retro" ui-sref="home"><i class="material-icons left">exit_to_app</i>Leave</a>
+            <a class="waves-effect waves-light btn yellow darken-2 btn-retro right"><i class="material-icons left">pause</i>Pause</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m6 offset-m4">
+            <div ng-repeat="(inputName,inputType) in game.inputs">
+                <joystick ng-if="inputType === 'stick'" ng-model="playerInputs[inputName]"></joystick>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+@import "materialize-css/sass/components/_color.scss";
+
+@import "../components/cast-icon";
+
+.btn-retro {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.8rem;
+  line-height: 36px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  i {
+    font-size: 1.1rem;
+    line-height: 36px;
+
+    &.left {
+      margin-right: 10px;
+    }
+  }
+}
+
+.btn.btn-block {
+  display: block;
+  width: 100%;
+}
+
+$cast-warn: color("orange","darken-1");
+
+.btn {
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        &.#{$color_name}-text {
+          @include cast-icon-variant($color_value, $color_value, $cast-warn);
+        }
+      }
+      @else if $color_name != "shades" {
+        &.#{$color_name}-text.text-#{$color_type} {
+          @include cast-icon-variant($color_value, $color_value, $cast-warn);
+        }
+      }
+    }
+  }
+}
+
+.btn i.cast-icon,
+.btn-floating i.cast-icon,
+.btn-large i.cast-icon,
+.btn-flat i.cast-icon {
+  font-size: 1.6rem;
+}
+
+.btn i.cast-icon > svg,
+.btn-floating i.cast-icon > svg,
+.btn-large i.cast-icon > svg,
+.btn-flat i.cast-icon > svg {
+  height: 1.6rem;
+}

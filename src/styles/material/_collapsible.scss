@@ -1,0 +1,61 @@
+collapsible {
+  display: block;
+  @extend ul;
+}
+
+.collapsible li + li:not(.active) {
+  margin-top: 0.5rem !important;
+}
+
+.collapsible-header {
+  position: relative;
+  font-family: "Press Start 2P", monospace;
+  text-align: center;
+  border-bottom:none;
+}
+
+.collapsible-header > i.material-icons {
+  display: inline-block;
+  float:right;
+  margin-right: 0;
+  margin-left: -2rem
+}
+
+.collapsible.collapsible-open li {
+  opacity: 0.55;
+}
+
+.collapsible.collapsible-open li.active {
+  opacity: 1;
+}
+
+.collapsible-body {
+  border-bottom:none;
+}
+
+.collapsible {
+
+  > li {
+    position: relative;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0.5rem;
+      left: 0.5rem;
+
+      overflow: visible;
+      border-right: 0.5rem solid rgba(0, 0, 0, 0.8);
+      border-bottom: 0.5rem solid rgba(0, 0, 0, 0.8);
+    }
+
+    &.active {
+
+      &:before {
+        border: none;
+      }
+    }
+  }
+}
